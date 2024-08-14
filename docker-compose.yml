@@ -1,0 +1,14 @@
+services:
+  database:
+    hostname: ${DB_HOST}
+    restart: always
+    image: postgres:16.3-alpine
+    ports:
+      - ${DB_PORT}:5432
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./__DB__/:/var/lib/postgresql/data/pgdata
