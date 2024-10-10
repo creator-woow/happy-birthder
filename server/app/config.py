@@ -13,7 +13,9 @@ class Settings(BaseSettings):
     DB_PASSWORD: str
     DB_PORT: int
     DB_HOST: str
-
+    JWT_SECRET: str
+    JWT_ALGORITHM: str
+    JWT_COOKIE_NAME: str = 'access_token'
     model_config = SettingsConfigDict(env_file=DOTENV)
 
 

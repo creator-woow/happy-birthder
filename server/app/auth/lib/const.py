@@ -1,0 +1,2 @@
+JWT_ID_FIELD = "sub"
+JWT_EXPIRATION_FIELD = "exp"

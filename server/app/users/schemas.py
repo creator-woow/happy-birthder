@@ -1,7 +1,7 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
 class UserSchema(BaseModel):
     id: int
-    email: str
+    email: EmailStr
     hashed_password: str
